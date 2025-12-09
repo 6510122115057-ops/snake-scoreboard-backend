@@ -7,9 +7,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// ทดสอบ API (root route)
+app.get("/", (req, res) => {
+  res.send("Snake Scoreboard API OK ✅");
+});
+
 // ใช้ Mongo URI จาก ENV ถ้าขึ้น Render, ตอนนี้ในเครื่องใช้ localhost ไปก่อน
 const MONGO_URI =
-  process.env.MONGO_URI || "mongodb://127.0.0.1:27017/snake-scores";
+  process.env.MONGO_URI || "mongodb+srv://Bossza:napRMS2Jxvq00ZvP@cluster0.g586oam.mongodb.net/?appName=Cluster0";
 
 mongoose
   .connect(MONGO_URI)
@@ -24,11 +29,6 @@ const scoreSchema = new mongoose.Schema({
 });
 
 const Score = mongoose.model("Score", scoreSchema);
-
-// ทดสอบ API
-app.get("/", (req, res) => {
-  res.send("Snake Scoreboard API OK");
-});
 
 // บันทึกคะแนน
 app.post("/api/scores", async (req, res) => {
