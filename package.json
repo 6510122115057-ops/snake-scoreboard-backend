@@ -1,0 +1,19 @@
+{
+  "name": "snake-scoreboard-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.0",
+    "mongodb": "^7.0.0",
+    "mongoose": "^8.0.0"
+  }
+}
