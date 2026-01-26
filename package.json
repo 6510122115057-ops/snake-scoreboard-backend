@@ -2,10 +2,11 @@
   "name": "snake-scoreboard-backend-enhanced",
   "version": "2.0.0",
   "description": "Enhanced Snake vs Monster Scoreboard Backend with detailed statistics",
-  "main": "backend-server-updated.js",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node backend-server-updated.js",
-    "dev": "nodemon backend-server-updated.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "migrate": "node migrate.js",
     "test": "jest"
   },
@@ -21,7 +22,7 @@
   "dependencies": {
     "express": "^4.18.2",
     "cors": "^2.8.5",
-    "sqlite3": "^5.1.6",
+    "mongoose": "^7.6.3",
     "helmet": "^7.1.0",
     "express-rate-limit": "^7.1.5"
   },
